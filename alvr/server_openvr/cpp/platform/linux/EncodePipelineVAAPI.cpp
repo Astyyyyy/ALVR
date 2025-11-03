@@ -218,7 +218,7 @@ alvr::EncodePipelineVAAPI::EncodePipelineVAAPI(
         break;
     }
 
-    av_opt_set_int(encoder_ctx->priv_data, "filler_data", settings.m_fillerData, 0);
+    av_opt_set_int(encoder_ctx->priv_data, "filler_data", settings.m_enforceCbrBitrate, 0);
 
     encoder_ctx->width = width;
     encoder_ctx->height = height;

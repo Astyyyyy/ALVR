@@ -165,7 +165,7 @@ pub fn contruct_openvr_config(session: &SessionConfig) -> OpenvrConfig {
         codec: settings.video.preferred_codec as _,
         h264_profile: settings.video.encoder_config.h264_profile as u32,
         rate_control_mode: settings.video.encoder_config.rate_control_mode as u32,
-        filler_data: settings.video.encoder_config.filler_data,
+        enforce_cbr_bitrate: settings.video.encoder_config.enforce_cbr_bitrate,
         entropy_coding: settings.video.encoder_config.entropy_coding as u32,
         force_hdr_srgb_correction: hdr_controls.force_hdr_srgb_correction,
         clamp_hdr_extended_range: hdr_controls.clamp_hdr_extended_range,

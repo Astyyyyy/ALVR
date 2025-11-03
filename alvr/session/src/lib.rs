@@ -55,7 +55,7 @@ pub struct OpenvrConfig {
     pub amf_preproc_tor: u32,
     pub encoder_quality_preset: u32,
     pub rate_control_mode: u32,
-    pub filler_data: bool,
+    pub enforce_cbr_bitrate: bool,
     pub entropy_coding: u32,
     pub force_sw_encoding: bool,
     pub sw_thread_count: u32,

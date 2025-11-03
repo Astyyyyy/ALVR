@@ -56,7 +56,7 @@ public:
     bool m_amdBitrateCorruptionFix;
     uint32_t m_nvencQualityPreset;
     uint32_t m_rateControlMode;
-    bool m_fillerData;
+    bool m_enforceCbrBitrate
     uint32_t m_entropyCoding;
     bool m_force_sw_encoding;
     uint32_t m_swThreadCount;

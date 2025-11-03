@@ -171,7 +171,8 @@ amf::AMFComponentPtr VideoEncoderAMF::MakeEncoder(
             );
             // Required for CBR to work correctly
             amfEncoder->SetProperty(
-                AMF_VIDEO_ENCODER_FILLER_DATA_ENABLE, Settings::Instance().m_fillerData
+                AMF_VIDEO_ENCODER_FILLER_DATA_ENABLE, Settings::Instance().m_enforceCbrBitrate
+                AMF_VIDEO_ENCODER_ENFORCE_HRD, Settings::Instance().m_enforceCbrBitrate
             );
             break;
         case ALVR_VBR:
@@ -315,7 +316,8 @@ amf::AMFComponentPtr VideoEncoderAMF::MakeEncoder(
             );
             // Required for CBR to work correctly
             amfEncoder->SetProperty(
-                AMF_VIDEO_ENCODER_HEVC_FILLER_DATA_ENABLE, Settings::Instance().m_fillerData
+                AMF_VIDEO_ENCODER_HEVC_FILLER_DATA_ENABLE, Settings::Instance().m_enforceCbrBitrate
+                AMF_VIDEO_ENCODER_HEVC_ENFORCE_HRD, Settings::Instance().m_enforceCbrBitrate
             );
             break;
         case ALVR_VBR:
@@ -479,7 +481,8 @@ amf::AMFComponentPtr VideoEncoderAMF::MakeEncoder(
             );
             // Required for CBR to work correctly
             amfEncoder->SetProperty(
-                AMF_VIDEO_ENCODER_AV1_FILLER_DATA, Settings::Instance().m_fillerData
+                AMF_VIDEO_ENCODER_AV1_FILLER_DATA, Settings::Instance().m_enforceCbrBitrate
+                AMF_VIDEO_ENCODER_AV1_ENFORCE_HRD, Settings::Instance().m_enforceCbrBitrate
             );
             break;
         case ALVR_VBR:

@@ -271,7 +271,7 @@ CABAC produces better compression but it's significantly slower and may lead to 
         help = r#"In CBR mode, this makes sure the bitrate does not fall below the assigned value. This is mostly useful for debugging."#
     ))]
     #[schema(flag = "steamvr-restart")]
-    pub filler_data: bool,
+    pub enforce_cbr_bitrate: bool,
 
     #[schema(strings(
         display_name = "10-bit encoding",
@@ -1735,7 +1735,7 @@ pub fn session_settings_default() -> SettingsDefault {
                 rate_control_mode: RateControlModeDefault {
                     variant: RateControlModeDefaultVariant::Cbr,
                 },
-                filler_data: false,
+                enforce_cbr_bitrate: false,
                 h264_profile: H264ProfileDefault {
                     variant: H264ProfileDefaultVariant::High,
                 },
